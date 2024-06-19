@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Game View Controller-->
+        <scene sceneID="K3O-QZ-MQX">
+            <objects>
+                <viewController storyboardIdentifier="StartGameViewController" id="e6W-nl-NR9" customClass="StartGameViewController" customModule="CardMatchingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUX-KO-mZA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3Wj-vV-SXH">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="of1-aH-N2P">
+                                <rect key="frame" x="52" y="394" width="288" height="64"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start game?">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="e6W-nl-NR9" eventType="touchUpInside" id="wc5-eo-EnX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zI0-rm-tFO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="of1-aH-N2P" firstAttribute="leading" secondItem="zI0-rm-tFO" secondAttribute="leading" constant="52" id="6kT-xO-zas"/>
+                            <constraint firstItem="3Wj-vV-SXH" firstAttribute="leading" secondItem="zI0-rm-tFO" secondAttribute="leading" id="Im6-H3-Iow"/>
+                            <constraint firstItem="of1-aH-N2P" firstAttribute="centerX" secondItem="gUX-KO-mZA" secondAttribute="centerX" constant="-0.5" id="Pjg-iX-Kf3"/>
+                            <constraint firstItem="3Wj-vV-SXH" firstAttribute="top" secondItem="gUX-KO-mZA" secondAttribute="top" id="Zr3-gQ-z3V"/>
+                            <constraint firstItem="3Wj-vV-SXH" firstAttribute="trailing" secondItem="zI0-rm-tFO" secondAttribute="trailing" id="fIb-Bf-LrI"/>
+                            <constraint firstItem="of1-aH-N2P" firstAttribute="centerY" secondItem="gUX-KO-mZA" secondAttribute="centerY" id="oHM-Ei-HHe"/>
+                            <constraint firstAttribute="bottom" secondItem="3Wj-vV-SXH" secondAttribute="bottom" id="p8n-94-jXY"/>
+                            <constraint firstItem="zI0-rm-tFO" firstAttribute="trailing" secondItem="of1-aH-N2P" secondAttribute="trailing" constant="53" id="xsW-Jg-MXn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CqE-wB-OPS"/>
+                    <connections>
+                        <outlet property="startGameButton" destination="of1-aH-N2P" id="SGf-g4-dIk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vB5-MM-7iJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093.8931297709923" y="3.5211267605633805"/>
+        </scene>
+        <!--Choose Game View Controller-->
+        <scene sceneID="4Cn-3Q-0Cu">
+            <objects>
+                <viewController storyboardIdentifier="ChooseGameViewController" id="Dff-05-W3t" customClass="ChooseGameViewController" customModule="CardMatchingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C2Y-41-Axo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1ot-ww-nSa">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="170" translatesAutoresizingMaskIntoConstraints="NO" id="lTg-hU-VNw">
+                                <rect key="frame" x="50" y="291" width="293" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-p0-Pli">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Sd6-Oe-U0R"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Find the fruit game">
+                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="a9q-4g-5KA" kind="show" id="0dT-VS-Z7U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtP-Yp-3cT">
+                                        <rect key="frame" x="0.0" y="220" width="293" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="3q9-GW-V8E"/>
+                                            <constraint firstAttribute="height" constant="50" id="H03-XN-1Ic"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Match Fruit game ">
+                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Lne-sQ-Yd7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Inm-1J-iy1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1ot-ww-nSa" secondAttribute="bottom" id="MJJ-vw-maX"/>
+                            <constraint firstItem="lTg-hU-VNw" firstAttribute="centerY" secondItem="C2Y-41-Axo" secondAttribute="centerY" id="NgF-R1-kui"/>
+                            <constraint firstItem="Inm-1J-iy1" firstAttribute="trailing" secondItem="lTg-hU-VNw" secondAttribute="trailing" constant="50" id="Re0-GH-P2k"/>
+                            <constraint firstItem="1ot-ww-nSa" firstAttribute="leading" secondItem="Inm-1J-iy1" secondAttribute="leading" id="U67-wg-8Ag"/>
+                            <constraint firstItem="lTg-hU-VNw" firstAttribute="centerX" secondItem="C2Y-41-Axo" secondAttribute="centerX" id="cXE-Ue-RFo"/>
+                            <constraint firstItem="lTg-hU-VNw" firstAttribute="leading" secondItem="Inm-1J-iy1" secondAttribute="leading" constant="50" id="leg-h2-dBY"/>
+                            <constraint firstItem="1ot-ww-nSa" firstAttribute="top" secondItem="C2Y-41-Axo" secondAttribute="top" id="nDn-80-WwW"/>
+                            <constraint firstItem="1ot-ww-nSa" firstAttribute="trailing" secondItem="Inm-1J-iy1" secondAttribute="trailing" id="vOl-kk-tcT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Scr-8Y-cdd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHO-Qi-vnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032.8244274809158" y="2.8169014084507045"/>
+        </scene>
+        <!--Find The Fruit View Controller-->
+        <scene sceneID="rXa-ct-W5h">
+            <objects>
+                <viewController storyboardIdentifier="FindTheFruitViewController" id="a9q-4g-5KA" customClass="FindTheFruitViewController" customModule="CardMatchingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tvl-aj-ewL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backForGames" translatesAutoresizingMaskIntoConstraints="NO" id="Ds8-Hc-ojT">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1055"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qNq-in-hc1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="trailing" secondItem="qNq-in-hc1" secondAttribute="trailing" id="Az2-G3-QEK"/>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="leading" secondItem="qNq-in-hc1" secondAttribute="leading" id="NRa-Ys-e0c"/>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="bottom" secondItem="qNq-in-hc1" secondAttribute="bottom" constant="213" id="eNd-Iz-qx1"/>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="top" secondItem="qNq-in-hc1" secondAttribute="top" id="gVY-1T-jZw"/>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="trailing" secondItem="qNq-in-hc1" secondAttribute="trailing" id="lha-H8-Yk6"/>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="bottom" secondItem="qNq-in-hc1" secondAttribute="bottom" constant="213" id="mcA-0i-ETD"/>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="top" secondItem="qNq-in-hc1" secondAttribute="top" id="vOm-gg-haN"/>
+                            <constraint firstItem="Ds8-Hc-ojT" firstAttribute="leading" secondItem="qNq-in-hc1" secondAttribute="leading" id="zRT-l8-MaE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VBb-Sv-N0P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0T9-qP-hWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4089.3129770992364" y="-394.36619718309862"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardMatchingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backForGames" translatesAutoresizingMaskIntoConstraints="NO" id="ufE-X1-e6d">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="997"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ufE-X1-e6d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EhD-SA-Vjz"/>
+                            <constraint firstItem="ufE-X1-e6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FpK-hd-l4n"/>
+                            <constraint firstItem="ufE-X1-e6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nxn-gr-UHw"/>
+                            <constraint firstItem="ufE-X1-e6d" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="155" id="UAN-ue-oWU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Na8-44-uJR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4089.3129770992364" y="293.66197183098592"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ilR-M6-aEt">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rz4-d0-P7R" customClass="WebViewController" customModule="CardMatchingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SL6-5n-j3o">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOj-h1-r7j">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="NRD-5d-G2d">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ksq-AI-AfT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NRD-5d-G2d" firstAttribute="centerY" secondItem="SL6-5n-j3o" secondAttribute="centerY" id="G1p-sa-poN"/>
+                            <constraint firstItem="NRD-5d-G2d" firstAttribute="centerX" secondItem="SL6-5n-j3o" secondAttribute="centerX" id="HoS-R7-zus"/>
+                            <constraint firstAttribute="bottom" secondItem="WOj-h1-r7j" secondAttribute="bottom" id="Rdv-pr-nFc"/>
+                            <constraint firstItem="WOj-h1-r7j" firstAttribute="leading" secondItem="Ksq-AI-AfT" secondAttribute="leading" id="ZtA-HJ-tV4"/>
+                            <constraint firstItem="WOj-h1-r7j" firstAttribute="top" secondItem="SL6-5n-j3o" secondAttribute="top" id="kDp-3Q-Vkp"/>
+                            <constraint firstItem="WOj-h1-r7j" firstAttribute="trailing" secondItem="Ksq-AI-AfT" secondAttribute="trailing" id="wPd-tU-xAg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="NRD-5d-G2d" id="c5R-M9-yKJ"/>
+                        <outlet property="webView" destination="WOj-h1-r7j" id="EV7-ZY-gWy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTJ-26-VY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2039" y="-48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backForGames" width="778" height="1364"/>
+        <image name="background" width="258.66665649414062" height="452"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
